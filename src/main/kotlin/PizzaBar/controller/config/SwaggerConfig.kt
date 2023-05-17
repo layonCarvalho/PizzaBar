@@ -20,7 +20,7 @@ class SwaggerConfig : WebMvcConfigurationSupport() {
     fun greetingApi(): Docket {
         return Docket(DocumentationType.SWAGGER_2)
             .select()
-            .apis(RequestHandlerSelectors.basePackage("com.PizzaBar.controller"))
+            .apis(RequestHandlerSelectors.basePackage("PizzaBar.controller"))
             .paths(PathSelectors.any())
             .build()
             .apiInfo(metaData())
@@ -28,8 +28,8 @@ class SwaggerConfig : WebMvcConfigurationSupport() {
 
     private fun metaData(): ApiInfo {
         return ApiInfoBuilder()
-            .title("Pizza Bar REST API")
-            .description("\"Pizza Bar REST API for greeting people\"")
+            .title("Pizzaria Bar REST API")
+            .description("\"Pizzaria Bar REST API for greeting people\"")
             .version("1.0.0")
             .license("Apache License Version 2.0")
             .licenseUrl("https://www.apache.org/licenses/LICENSE-2.0\"")

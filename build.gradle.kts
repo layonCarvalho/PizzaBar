@@ -10,12 +10,16 @@ plugins {
 }
 
 
-group = "com.PizzaBar"
+group = "PizzaBar"
 version = "0.0.1-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_1_8
 
 repositories {
 	mavenCentral()
+	maven {
+		url = uri("https://repo.clojars.org")
+		name = "Clojars"
+	}
 }
 
 dependencies {
@@ -26,7 +30,7 @@ dependencies {
 	//REPOSITORY
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	implementation("org.springframework.boot:spring-boot-starter-data-rest")
-	implementation("org.postgresql:postgresql:42.3.1")
+	implementation("org.postgresql:postgresql:42.5.4")
 
 
 
@@ -44,10 +48,10 @@ dependencies {
 
 
 	//SWAGGER
-	implementation("org.springframework.boot:spring-boot-starter-parent:3.0.4")
+	implementation("org.springframework.boot:spring-boot-starter-parent:2.6.2")
 	implementation("io.springfox:springfox-boot-starter:3.0.0")
 	implementation("io.springfox:springfox-swagger2:3.0.0")
-	implementation("io.springfox:springfox-swagger-ui:3.0.0")
+	implementation("io.springfox:springfox-swagger-ui:2.9.2")
 
 
 	implementation("it.xabaras.android.logger:Logger:1.3.6")

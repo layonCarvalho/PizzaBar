@@ -8,9 +8,9 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories
 import org.springframework.web.servlet.config.annotation.EnableWebMvc
 
 @EnableWebMvc
-@ComponentScan(value =["com.PizzaBar"])
-@EntityScan(basePackages = ["com.PizzaBar.repository"])
-@EnableJpaRepositories(basePackages = ["com.PizzaBar.repository"])
+@ComponentScan(value =["PizzaBar"])
+@EntityScan(basePackages = ["PizzaBar.repository"])
+@EnableJpaRepositories(basePackages = ["PizzaBar.repository"])
 @SpringBootApplication
 class PizzaBarApplication{
 

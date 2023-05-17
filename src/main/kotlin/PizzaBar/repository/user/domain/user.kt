@@ -1,10 +1,10 @@
 package PizzaBar.repository.user.domain
 
 import PizzaBar.entities.domain.UserEntity
-import org.jetbrains.annotations.NotNull
 import java.time.LocalDateTime
 import javax.persistence.*
 import javax.validation.constraints.Min
+import javax.validation.constraints.NotNull
 import javax.validation.constraints.Size
 
 
