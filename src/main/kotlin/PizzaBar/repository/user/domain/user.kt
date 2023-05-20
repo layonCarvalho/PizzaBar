@@ -22,9 +22,9 @@ class User(
     @Size(min=2, max=30)
     val name: String? = null,
 
-    @Column(name = "telefone")
+    @Column(name = "senha")
     @Min(18)
-    val cellphone: String? = null,
+    val senha: String? = null,
 
     @Column(name = "ativo")
     val active: Boolean? = null,
@@ -45,7 +45,7 @@ fun List<User>.toEntity() = map { it.toEntity() }
 
 fun User.toEntity() = UserEntity(id = id,
     name = name,
-    cellphone = cellphone,
+    senha = senha,
     active = active,
     dateCreate	  = dateCreate,
     dateUpdate = dateUpdate,
@@ -56,7 +56,7 @@ fun List<UserEntity>.toDomain() =  map { it.toDomain() }
 fun UserEntity.toDomain() = User (
     id = id,
     name = name,
-    cellphone = cellphone,
+    senha = senha,
     active = active,
     dateCreate = dateCreate,
     dateUpdate = dateUpdate,
