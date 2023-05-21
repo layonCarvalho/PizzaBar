@@ -9,4 +9,5 @@ class UserHandler (val messageSource: MessageSource){
 
     val LOG = LoggerFactory.getLogger(UserHandler::class.java)!!
 
+    //TODO MAPEAR AS EXCECOES NO HANDLER
 }
