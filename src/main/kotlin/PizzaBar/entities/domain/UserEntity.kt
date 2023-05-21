@@ -4,7 +4,7 @@ import java.time.LocalDateTime
 
 class UserEntity (val id: Long? = null,
                                     val name: String? = null,
-                                    val cellphone: String? = null,
+                                    val senha:  String? = null,
                                     val active: Boolean? = null,
                                     val dateCreate: LocalDateTime? = LocalDateTime.now(),
                                     val dateUpdate: LocalDateTime? = null,
@@ -29,7 +29,7 @@ override fun equals(other: Any?): Boolean {
 
     if (id != other.id) return false
     if (name != other.name) return false
-    if (cellphone != other.cellphone) return false
+    if (senha != other.senha) return false
     if (active != other.active) return false
     if (dateCreate != other.dateCreate) return false
     if (dateUpdate != other.dateUpdate) return false
@@ -45,7 +45,7 @@ override fun get(index: Int): UserEntity {
 override fun hashCode(): Int {
     var result = id?.hashCode() ?: 0
     result = 31 * result + (name?.hashCode() ?: 0)
-    result = 31 * result + (cellphone?.hashCode() ?: 0)
+    result = 31 * result + (senha?.hashCode() ?: 0)
     result = 31 * result + (active?.hashCode() ?: 0)
     result = 31 * result + (dateCreate?.hashCode() ?: 0)
     result = 31 * result + (dateUpdate?.hashCode() ?: 0)

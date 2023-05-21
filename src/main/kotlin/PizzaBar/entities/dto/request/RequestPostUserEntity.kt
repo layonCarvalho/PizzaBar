@@ -3,7 +3,7 @@ package PizzaBar.entities.dto.request
 import PizzaBar.entities.domain.UserEntity
 
 class RequestPostUserEntity (val name:String,
-                             val cellphone:String
+                             val senha:String
 
 ){
 
@@ -14,6 +14,6 @@ class RequestPostUserEntity (val name:String,
     override fun hashCode(): Int {
         return super.hashCode()
     }
-    fun toEntity() = UserEntity(name = name, cellphone = cellphone)
+    fun toEntity() = UserEntity(name = name, senha = senha)
 
 }
